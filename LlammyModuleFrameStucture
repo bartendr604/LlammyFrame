@@ -1,0 +1,118 @@
+# Llammy Framework v8.5 - Module Directory Structure
+
+## 📁 Complete File Structure
+
+```
+llammy_framework/
+├── __init__.py                    # Addon entry point
+├── llammy_core.py                 # Main registration & coordination (✅ DONE)
+│
+├── core/                          # Core AI systems
+│   ├── __init__.py
+│   ├── llammy_rag.py             # RAG system with learning integration
+│   ├── llammy_models.py          # AI model management
+│   ├── llammy_debug.py           # AI-powered debugging
+│   ├── llammy_pipeline.py        # Processing pipeline
+│   └── llammy_learning.py        # Learning system
+│
+├── blender/                       # Blender-specific modules
+│   ├── __init__.py
+│   └── llammy_corrections.py     # Blender API fixes & validation
+│
+├── characters/                    # Swappable character story systems
+│   ├── __init__.py
+│   ├── llammy_characters.py      # Base character system
+│   ├── elephant_story.py         # Tien, Nishang, Xiaohan
+│   ├── robot_story.py            # Cyberpunk characters
+│   └── fantasy_story.py          # Fantasy characters
+│
+├── ui/                           # User interface modules
+│   ├── __init__.py
+│   ├── llammy_panels.py          # Main UI panel
+│   ├── llammy_operators.py       # All Blender operators
+│   └── llammy_metrics.py         # Metrics tracking & display
+│
+└── data/                         # Data storage
+    ├── rag_data/                 # RAG knowledge base
+    │   ├── blender_api/
+    │   ├── documentation/
+    │   └── vector_index/
+    ├── learning/                 # Learning data
+    │   ├── llammy_memory.csv
+    │   ├── success_patterns.json
+    │   └── user_preferences.json
+    └── stories/                  # Story configurations
+        ├── elephant_story.json
+        ├── robot_story.json
+        └── fantasy_story.json
+```
+
+## 🎯 Module Breakdown Benefits
+
+### **Size Reduction:**
+- `llammy_core.py`: ~200 lines (was 2800!)
+- Each module: 150-400 lines max
+- Total: Same functionality, 10x more manageable
+
+### **Development Benefits:**
+- **Single Module Focus**: Work on one piece at a time
+- **Easy Context**: Upload just the module you're working on
+- **Parallel Development**: Multiple people can work on different modules
+- **Testing**: Test individual modules in isolation
+
+### **Story System Benefits:**
+- **Swappable Characters**: Easy to switch between story universes
+- **Theme Consistency**: Each story has its own visual/narrative style
+- **Extensible**: Add new stories without touching core code
+- **Modular Assets**: Characters, materials, animations per story
+
+## 🚀 Next Steps
+
+### Priority Order for Module Creation:
+
+1. **`ui/llammy_operators.py`** - Extract all operators (immediate functionality)
+2. **`characters/elephant_story.py`** - Your current characters as a module
+3. **`core/llammy_rag.py`** - Enhanced RAG with learning integration
+4. **`core/llammy_debug.py`** - AI-powered debugging system
+5. **`core/llammy_models.py`** - Model management
+6. **`blender/llammy_corrections.py`** - API fixes
+7. **`ui/llammy_panels.py`** - Main UI panel
+8. **`core/llammy_pipeline.py`** - Processing pipeline
+9. **`core/llammy_learning.py`** - Learning system
+10. **`ui/llammy_metrics.py`** - Metrics tracking
+
+### Character Story Examples:
+
+**Elephant Story (Current):**
+- Tien: intricately carved Jade elephant, male, wooden harnmonica player.energetic, curious, clumsy. Non-speaking, communicates via whimsical elephant-like trumpeting.
+- Nishang: female Glass-like purple jade elephant, shy,  demur, non speaking dims or brightens emotional lighting. Tattoo like flowers on sides and ears
+- Xiaohan: Wise ancient four claw Chinese dragon, narrator, mentor. Avowed guardian of Tien and Nishang. Speaks in metaphor and philosophy.
+
+**Robot Story (Future):**
+- Zara: Neon-lit android, hacker, rebellious
+- Bolt: Industrial robot, strong, loyal
+- Oracle: AI entity, mysterious, omniscient
+
+**Fantasy Story (Future):**
+- Aria: Elven mage, graceful, nature magic
+- Thorin: Dwarven warrior, sturdy, fire magic
+- Mystic: Ancient wizard, wise, cosmic magic
+
+## 💡 Development Workflow
+
+1. **Work on one module at a time**
+2. **Upload only that module for changes**
+3. **Test module independently**
+4. **Integrate back into main framework**
+5. **No more massive file uploads!**
+
+## 🔧 Module Templates
+
+Each module will have:
+- **Clear interface/API**
+- **Self-contained functionality**
+- **Proper error handling**
+- **Documentation**
+- **Unit tests (future)**
+
+Want to start with any specific module? The operators would give you immediate functionality back, or we could dive into the enhanced RAG system!
